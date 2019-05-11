@@ -1,0 +1,38 @@
+<div class *ngIf = "activeNote">
+  <h2
+    *ngIf = "!activeNote.isEditingTitle"
+    (dblclick) = "editTitle()"
+    class = "title">
+    {{ activeNote.title }}
+  </h2>
+
+  <input
+    *ngIf = "activeNote.isEditingTitle"
+    class = "title-input"
+    (blur) = "doneEdit()"
+    (keyup.esc) = "doneEdit()"
+    type="text"
+    [(ngModel)] = "activeNote.title"
+    (keyup.enter) = "doneEdit()"
+  >
+
+  <p
+    *ngIf = "!activeNote.isEditingContent"
+    class = "content"
+    (dblclick) = "editNote()">
+      {{activeNote.content}}
+    </p>
+
+  <textarea
+    *ngIf = "activeNote.isEditingContent"
+    [(ngModel)] = "activeNote.content"
+    (blur) = "doneEdit()"
+    (keyup.esc) = "doneEdit()"
+    class = "content-edit"
+    cols="30" rows="10">
+  </textarea>
+
+  <div class="editing-flag" *ngIf = "activeNote.isEditingContent">EDITING NOTE</div>
+</div>
+
+
