@@ -1,27 +1,23 @@
-# NotesApp
+# Angular Notes Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Development server
+## Using the Application
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Most of the application should be intuitive, however there are some parts that are a bit rough around the edges due to this being my first Angular application and just wanting to test my knowledge primarily of the new features of Angular that I've learned.
 
-## Code scaffolding
+### Adding a Note
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Click the pencil icon in the top right and fill in the input box that appears to set the title of the new note. When the title is entered, press the <kbd>Enter</kbd> button to add the note to the list of notes in the application.
 
-## Build
+### Editing a Note's Content
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Double click on the note area to enter 'editing mode'. The note can then be edited however you want. When you are done, use the <kbd>Esc</kbd> key to exit 'editing mode'.
 
-## Running unit tests
+### Editing a Note's Title
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Similarly to editing the note content, double clicking on the title will enter 'editing mode' for the title of that particular note. This can then be confirmed by using the <kbd>Esc</kbd> key or the <kbd>Enter</kbd> key.
 
-## Running end-to-end tests
+### Deleting a Note
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+When you hover over the an item in list of notes to the left, a trash can icon should appear for that particular note. Simply click on the red trash can and the note will be deleted.
